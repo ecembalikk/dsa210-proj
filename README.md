@@ -1,10 +1,10 @@
 # Design and Evaluation of a Longitudinal Survey of Subjective Emotional States, Events and Sleep Quaility Metrics
 ## Aim:
-This project will investigate the relationship between well-being factors and sleep quality. Main focus will be on the predictive abilities of these factors. Descriptive analysis will be carried out to determine patterns as well.
+This project will investigate the relationship between well-being factors and sleep quality. Main focus will be on the predictive abilities of these factors. Descriptive analytics will be applied to determine patterns as well.
 ## Hypothesis:
-Well-being factors are suitable predictors of sleep quality.
+Well-being factors are suitable predictors of sleep quality and there exists patterns among interactions between emotional states of an individual.
 ## Data:
-For each day, around 10 features will be recorded on a survey. 7 of 12 features are continous variables, which describe the emotional states (ES) as follows.
+For each day, around 10 features will be recorded on a survey. 7 of 10 features are continous variables, which describe the emotional states (ES) as follows.
 * Anger
 * Anxiety
 * Awareness
@@ -33,6 +33,39 @@ Main target features will be collected from an iPhone's Health application geare
 *An example of an instance is given above.*
 
 ## Data Collection:
-A mini web application will be implemented via Python's *flet* library to collect data. An SQL database will be employed to collect analysis-ready data. A single widget will be implemented with input boxes for continous features and dropdown menu for binary ones. SQL data will be read, processed and analyzed with Python's *pandas* and *scikit-learn* libraries. By the end of the project's deadline, the data from the Health application will be recorded on an Excel file. Both data will be merged and analyzed.
+A mini web application will be implemented via Python's *flet* library to collect data. An SQL database will be employed to collect analysis-ready data. A single widget will be implemented with input boxes for continous features and dropdown menu for binary ones.
+
+The application live on the following link: https://ihappy-bold-haze-9843.fly.dev/
+
+** Demo User:**
+username: *demo*
+password: *demo*
+
+SQL data will be read, processed and analyzed with Python's *pandas*, *scikit-learn* and *scipy* libraries. *matplotlib* and *seaborn* libraries are used for data visualization.
+
+Historical data is exported from **iOS Health** application and stored on the SQL as a table where each instance is described by 3 features: 
+* date
+* time in bed
+* time in REM
+ 
 ## Method:
-###
+### 1) Exploratory Data Analysis
+* Mean and Standard Deviation
+* Histogram
+* Violin Plot
+* Correlation
+* Principal Component Analysis
+* Hypothesis Testing - Chi Square
+
+### 2) Predictive Data Analysis
+* Linkage Tree and Dendrogram
+* KMeans
+* Regression
+* Decision Trees
+* XGBoost
+* SVM
+
+## Analysis, Results & Discussion:
+[Report][1]
+
+[1]: https://github.com/ecembalikk/dsa210-proj/blob/main/analyze.ipynb "Analysis and Report Notebook"
